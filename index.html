@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kieran Brennan</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="dist/css/app.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Lato:400,300">
+  </head>
+
+
+  <body>
+    <div class="sidebar">
+        <div class="sidebarContent">
+            <div class="title">
+                Kieran <br> Brennan
+            </div>
+            <div class="categoryCont">
+                <div class="category" id="About" onclick="changeContent('About')">About</div>
+                
+                <div class="category" id="Research" onclick="changeContent('Research')">Research</div>
+                
+                <div class="category" id="Projects" onclick="changeContent('Projects')">Projects</div>
+                
+                <div class="category" id="Contact" onclick="changeContent('Contact')">Contact</div>
+                
+                <div class="category" id="CV" href="./KieranBrennan_CV.pdf">CV</div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="tabContent" id="tabContentId">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+
+</html>

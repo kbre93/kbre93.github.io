@@ -1,0 +1,105 @@
+:root {
+	--base:#EEE;
+	--title-text:#000;
+	--menu-text:#333;
+	--gray-text:#657b83;
+	--yellow:#b58900;
+	--orange:#cb4b16;
+	--red:#dc322f;
+	--magenta:#d33682;
+	--violet:#6c71c4;
+	--blue:#268bd2;
+	--cyan:#2aa198 ;
+	--green:#859900;
+}
+
+
+body {
+	/*background-color: rgb(30, 30, 30);*/
+	/*background-color: rgb(250,250,250);*/
+	margin:0;
+	padding:0;
+}
+
+div.sidebar {
+	position: fixed;
+	width: 240px;
+	height: 100%;
+	/*float: left;*/
+	background: var(--base);
+}
+
+div.sidebarContent {
+	/*padding: 60px;*/
+	margin:45px;
+	/*background:red;*/
+}
+
+div.content {
+	margin-left: 400px;
+	height: 400px;
+	width: auto;
+	font-family: "avenir";
+	position: relative;
+	background: white;
+	color: black;
+	overflow: auto;
+	z-index: 1;
+}
+
+div.tabContent {
+	width: 80%;
+	height: 100%;
+	position: relative;
+	background: red;
+	margin: 200px;
+	text-align: center;
+	font-size: 24px;
+}
+
+div.title {
+	font-family: "lato";
+	font-size: 36px;
+	margin:10px;
+	margin-bottom: 70px;
+	color: var(--title-text);
+
+	/*background-color: orange;*/
+}
+
+div.categoryCont {
+	font-family: "avenir";
+	font-size: 20px;
+	margin:10px;
+	/*background-color: blue;*/
+	text-align: right;
+}
+
+div.category {
+	text-decoration: none;
+	/*color: rgb(220,220,220);*/
+	color: var(--menu-text);
+	margin-top:15px;
+
+}
+div.category:hover {
+	color: var(--gray-text);
+}
+
+/*div#About {
+	color: var(--yellow);
+}
+div#Research {
+	color: var(--red);
+}
+div#Projects {
+	color: var(--blue);
+}
+div#Contact {
+	color: var(--cyan);
+}
+div#CV {
+	color: var(--green);
+}
+
+*/

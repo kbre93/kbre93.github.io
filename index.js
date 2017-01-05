@@ -17,7 +17,7 @@ function changeContent(category) {
 $(document).ready(function() {
 	
 
-	$('.categoryCont div').click(function() {
+	$('.categoryCont div .category').click(function() {
 
 		var toLoad = $(this).attr('href');  // Getting the content from the link to load
 		$('#contentId').hide('fast',loadContent); 		// Hiding the current content then loading new

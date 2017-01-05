@@ -21,12 +21,21 @@ body {
 	padding:0;
 }
 
+div.parent {
+	margin-left: 240px; 
+}
+
 div.sidebar {
 	position: fixed;
-	width: 240px;
-	height: 100%;
+	/*width: 240px;*/
+	/*height: 100%;*/
 	/*float: left;*/
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 240px;
 	background: var(--base);
+
 }
 
 div.sidebarContent {
@@ -36,18 +45,23 @@ div.sidebarContent {
 }
 
 div.content {
-	margin-left: 400px;
-	height: 400px;
+	width: 500px;
+	margin: auto;
+	margin-top: 200px;
+	font-family: "avenir";
+	font-size: 24px;
+	text-align: center;
+/*	height: 400px;
 	width: auto;
 	font-family: "avenir";
 	position: relative;
 	background: white;
 	color: black;
 	overflow: auto;
-	z-index: 1;
+	z-index: 1;*/
 }
 
-div.tabContent {
+/*div.tabContent {
 	width: 80%;
 	height: 100%;
 	position: relative;
@@ -55,7 +69,7 @@ div.tabContent {
 	margin: 200px;
 	text-align: center;
 	font-size: 24px;
-}
+}*/
 
 div.title {
 	font-family: "lato";
@@ -97,9 +111,8 @@ div#Projects {
 }
 div#Contact {
 	color: var(--cyan);
-}
-div#CV {
+}*/
+/*div#CV {
 	color: var(--green);
-}
+}*/
 
-*/

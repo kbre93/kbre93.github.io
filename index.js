@@ -1,16 +1,41 @@
 function changeContent(category) {
 	//TODO: Make separate html files that are inserted into the tab content
 	if (category == 'About') {
-		document.getElementById('tabContentId').innerHTML = 'I am a biomedical engineering, completing my PhD at The University of Auckland, New Zealand on Needle-free drug delivery';
+		document.getElementById('contentId').innerHTML = 'I am a Biomedical Engineering PhD Student from New Zealand working on Needle-free drug delivery';
 	} 
 	else if(category == 'Research') {
-		document.getElementById('tabContentId').innerHTML = 'Testing2!';	
+		document.getElementById('contentId').innerHTML = 'Testing2!';	
 	}
 	else {
-		document.getElementById('tabContentId').innerHTML = 'Testing3!';
+		document.getElementById('contentId').innerHTML = 'Testing3!';
 	}
 
 
 }
+
+
+$(document).ready(function() {
+	
+
+	$('.categoryCont div').click(function() {
+
+		var toLoad = $(this).attr('href');  // Getting the content from the link to load
+		$('#contentId').hide('fast',loadContent); 		// Hiding the current content then loading new
+
+		function loadContent() {
+			$('#contentId').load(toLoad,'',showNewContent);
+		};
+
+		function showNewContent() {
+			$('#contentId').show('normal');
+		}
+		return false;
+	});
+});
+
+
+
+
+
 
 changeContent('About');

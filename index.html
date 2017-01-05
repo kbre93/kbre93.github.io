@@ -7,35 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link href="dist/css/app.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Lato:400,300">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,300">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
 
   <body>
-    <div class="sidebar">
-        <div class="sidebarContent">
-            <div class="title">
-                Kieran <br> Brennan
-            </div>
-            <div class="categoryCont">
-                <div class="category" id="About" onclick="changeContent('About')">About</div>
-                
-                <div class="category" id="Research" onclick="changeContent('Research')">Research</div>
-                
-                <div class="category" id="Projects" onclick="changeContent('Projects')">Projects</div>
-                
-                <div class="category" id="Contact" onclick="changeContent('Contact')">Contact</div>
-                
-                <div class="category" id="CV" href="./KieranBrennan_CV.pdf">CV</div>
+   <div class="parent">
+        <div class="sidebar">
+            <div class="sidebarContent">
+                <div class="title">
+                    Kieran <br> Brennan
+                </div>
+                <div class="categoryCont">
+                    <div class="category" id="About" href="about.html">About</div>
+                    
+                    <div class="category" id="Research" onclick="changeContent('Research')">Research</div>
+                    
+                    <div class="category" id="Projects" onclick="changeContent('Projects')">Projects</div>
+                    
+                    <div class="category" id="Contact" onclick="changeContent('Contact')">Contact</div>
+                    
+                    <div class="category" id="CV" href="./KieranBrennan_CV.pdf">CV</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content">
-        <div class="tabContent" id="tabContentId">
+        <div class="content" id="contentId">
+            
         </div>
     </div>
-
     <script type="text/javascript" src="index.js"></script>
   </body>
 

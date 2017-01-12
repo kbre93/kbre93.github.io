@@ -9,6 +9,7 @@
 	--magenta:#d33682;
 	--violet:#6c71c4;
 	--blue:#268bd2;
+	--lightblue:#C3EBFF;
 	--cyan:#2aa198 ;
 	--green:#859900;
 }
@@ -34,7 +35,7 @@ div.sidebar {
 	left: 0px;
 	bottom: 0px;
 	width: 240px;
-	background: var(--base);
+	background: var(--lightblue);
 
 }
 
@@ -45,12 +46,9 @@ div.sidebarContent {
 }
 
 div.content {
-	width: 500px;
-	margin: auto;
-	margin-top: 200px;
 	font-family: "avenir";
-	font-size: 24px;
-	text-align: center;
+	
+	/*background: red;*/
 /*	height: 400px;
 	width: auto;
 	font-family: "avenir";
@@ -94,25 +92,197 @@ div.category {
 	/*color: rgb(220,220,220);*/
 	color: var(--menu-text);
 	margin-top:15px;
-
+	cursor: pointer;
 }
+
 div.category:hover {
 	color: var(--gray-text);
 }
 
-/*div#About {
-	color: var(--yellow);
+a {
+	text-decoration: none;
+	color: inherit;
 }
-div#Research {
-	color: var(--red);
+
+/**********ABOUT PAGE**********/
+
+div#about {
+	/*color: var(--yellow);*/
+	/*background: #000;*/
+	width: 500px;
+	margin: auto;
+	margin-top: 110px;
+	font-family: "avenir";
+	font-size: 28px;
+	text-align: center;
 }
-div#Projects {
-	color: var(--blue);
+div#about_sub {
+	/*color: var(--yellow);*/
+	/*background: #000;*/
+	width: 500px;
+	margin: auto;
+	margin-top: 100px;
+	font-family: "avenir";
+	font-size: 18px;
+	text-align: justify;
+	-moz-text-align-last: center; /* Code for Firefox */
+    text-align-last: center;
 }
-div#Contact {
-	color: var(--cyan);
-}*/
-/*div#CV {
-	color: var(--green);
+
+div#about_sub a{
+	font-size: 19px;
+	text-decoration: underline;
+}
+div#about_sub a:hover{
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+
+}
+
+div#contact {
+	/*background: white;*/
+	width: 500px;
+	margin: auto;
+	margin-top: 100px;
+	text-align: center;
+	font-size: 14px;
+}
+
+#contact img{
+	display: inline;
+	width: 20px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+#contact img:hover{
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+
+/*img {
+	width: 500px;
 }*/
 
+
+/**********PROJECTS PAGE**********/
+
+div#projects {
+	/*background: black;*/
+	margin-top: 80px;
+	text-align: center;  /*Centre list elements horizontally*/
+}
+
+#rig {
+	/*background-color:red;*/
+    max-width:900px;
+    margin:0 auto; /*center aligned*/
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+}
+
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    /*width:25%;*/
+    width:300px;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+	/*background:blue;*/
+    margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #3DC0F1 no-repeat center 20%;
+    /*background: var(--lightblue) no-repeat center 20%;*/
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+	/*background:green;*/
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'avenir';
+    font-weight:normal!important;
+    top:40%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+/* when screen less than 9000, width is 25%*/
+/*@media (max-width: 9000px) { 
+    #rig li {
+        width:25%;
+    }
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width:50%;
+    }
+}
+
+*/

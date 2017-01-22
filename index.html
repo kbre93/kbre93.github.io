@@ -8,26 +8,36 @@
     <!-- <link href="dist/css/app.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:400,300">
+    <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Arvo">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
 
 
   <body>
-   <div class="parent">
-        <div class="sidebar">
-            <div class="sidebarContent">
-                <div class="title">
-                    Kieran <br> Brennan
-                </div>
-                <div class="categoryCont">
-                    <div class="category tab" href="about.html">About</div>
-                    <div class="category tab" href="projects.html">Projects</div>
-                    <div class="category" ><a href="./KieranBrennan_CV.pdf" target="_blank">CV</a></div>
-                </div>
+        <!-- <div class="topbar">
+            <div class="topbarContent">
+                <ul class="topbarList">
+                    <li style="float:left"><a class="title">Kieran Brennan</a></li>
+                    <li><a class="category" href="./KieranBrennan_CV.pdf" target="_blank">CV</a></li>
+                    <li><a class="category tab" href="projects.html">Projects</a></li>
+                    <li><a class="category tab" href="about.html">About</a></li>
+                    
+                </ul>
             </div>
-        </div>
-        <div class="content" id="contentId"></div>
-    </div>
+        </div> -->
+
+        <ul class="topnav" id="myTopnav">
+          <li><a class="name" href="#home">Kieran <span class="surname">Brennan</span></a></li>
+          <li><a class="pageTitle" href="KieranBrennan_CV.pdf" target="_blank" >CV</a></li>
+          <!-- <li><a class="pageTitle pageLink" href="#" src="projects.html">Projects</a></li> -->
+          <li><a class="pageTitle pageLink" href="#" src="projects/aqualarm.html">Projects</a></li>
+          <li><a class="pageTitle pageLink" href="#" src="about.html">About</a></li>
+          <li class="icon"><a href="javascript:void(0);" onclick="dropDownMenu()">☰</a>
+          </li>
+        </ul>
+
+        <div class="content"></div>
+        <div class="bottombar">&copy Kieran Brennan 2017</div>
     <script type="text/javascript" src="index.js"></script>
   </body>
 

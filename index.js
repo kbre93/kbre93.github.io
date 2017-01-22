@@ -28,12 +28,21 @@
 // });
 
 $(document).ready( function() {
-    $(".tab").on("click", function() {
-        $("#contentId").load($(this).attr('href'));
+    $(".pageLink").on("click", function() {
+        $(".content").load($(this).attr('src'));
     });
 
-    $("#contentId").load("about.html");
+    $(".content").load("about.html");
 });
+
+function dropDownMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 
 
 // load_page('about.html');

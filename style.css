@@ -22,128 +22,177 @@ body {
 	padding:0;
 }
 
-div.parent {
-	margin-left: 240px; 
+ul.topnav {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  /*background-color: #333;*/
+  /*background-color: red;*/
+  /*height: 50px;*/
 }
 
-div.sidebar {
-	position: fixed;
-	/*width: 240px;*/
-	/*height: 100%;*/
-	/*float: left;*/
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	width: 240px;
-	background: var(--lightblue);
+ul.topnav li {float: right;}
+ul.topnav li:first-child {float: left;}
 
+ul.topnav li a {
+	
+  	display: inline-block;
+  	color:var(--title-text);
+  	text-align: center;
+  	text-decoration: none;
+  	transition: 0.3s;
+}
+ul.topnav li a.name {
+	font-family: "arvo";
+	font-size: 26px;
+	margin: 30px 60px;
+}
+ul.topnav li a.pageTitle {
+	font-family: "arvo";
+	font-size: 18px;
+	margin: 30px 80px 30px 0px;
+	transition: 0.3s;
 }
 
-div.sidebarContent {
-	/*padding: 60px;*/
-	margin:45px;
-	/*background:red;*/
+ul.topnav li a.pageTitle:hover {
+	color: var(--blue);
+	border-bottom: solid var(--blue);
+	border-bottom-width: 1px;
+}
+
+ul.topnav li.icon {display: none;}
+ul.topnav li.icon a {
+	font-size: 18px;
+	margin: 40px 60px 40px 0px;
+}
+
+@media screen and (max-width:720px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:720px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    margin: 40px 60px;
+  }
+}
+
+span.surname {
+	color: var(--blue);
 }
 
 div.content {
 	font-family: "avenir";
-	
-	/*background: red;*/
-/*	height: 400px;
-	width: auto;
-	font-family: "avenir";
-	position: relative;
-	background: white;
-	color: black;
-	overflow: auto;
-	z-index: 1;*/
+	/*background: black;*/
 }
 
-/*div.tabContent {
-	width: 80%;
-	height: 100%;
-	position: relative;
-	background: red;
-	margin: 200px;
+div.bottombar{
+	font-family: "arvo";
+	font-size: 14px;
+	opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+	margin: 120px auto 60px;
+	/*margin-top: 120px;*/
 	text-align: center;
-	font-size: 24px;
-}*/
+}
+
+/******** GENERAL SETTINGS *********/
 
 div.title {
-	font-family: "lato";
-	font-size: 36px;
-	margin:10px;
-	margin-bottom: 70px;
-	color: var(--title-text);
-
-	/*background-color: orange;*/
-}
-
-div.categoryCont {
-	font-family: "avenir";
-	font-size: 20px;
-	margin:10px;
-	/*background-color: blue;*/
-	text-align: right;
-}
-
-div.category {
-	text-decoration: none;
-	/*color: rgb(220,220,220);*/
-	color: var(--menu-text);
-	margin-top:15px;
-	cursor: pointer;
-}
-
-div.category:hover {
-	color: var(--gray-text);
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-/**********ABOUT PAGE**********/
-
-div#about {
 	/*color: var(--yellow);*/
 	/*background: #000;*/
-	width: 500px;
+	width: 600px;
 	margin: auto;
-	margin-top: 110px;
+	margin-top: 50px;
 	font-family: "avenir";
 	font-size: 28px;
 	text-align: center;
 }
-div#about_sub {
+div.description {
 	/*color: var(--yellow);*/
 	/*background: #000;*/
-	width: 500px;
+	width: 550px;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 50px;
 	font-family: "avenir";
 	font-size: 18px;
-	text-align: justify;
-	-moz-text-align-last: center; /* Code for Firefox */
-    text-align-last: center;
+	text-align: left;
+  /*text-align-last: center;*/
+	/*-moz-text-align-last: center; /* Code for Firefox */
+}
+@media screen and (max-width:600px) {
+	div.title {
+		width:300px;
+	}
+	div.description {
+		width:300px;	
+	}
 }
 
-div#about_sub a{
+div.quote {
+  width: 550px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: "avenir";
+  font-size: 18px;
+  text-align: center;
+  /*text-align-last: center;*/
+  -moz-text-align-last: center; /* Code for Firefox */
+}
+
+
+/**********ABOUT PAGE**********/
+
+a.link {
+	text-decoration: none;
+	color: inherit;
+	border-bottom: solid var(--blue);
+	border-bottom-width: 1px;
 	font-size: 19px;
-	text-decoration: underline;
+	transition: 0.3s;
 }
-div#about_sub a:hover{
-	opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+a.link:hover{
+	color: var(--blue);
+}
 
+
+div#banner {
+   	margin: 0px 0px;
+	padding: 0;
+   	/*margin-top: 20px;*/
+   	background-color:#000
+   	top: 0;
+   	left: 0;
+}
+div#banner img{
+	width:100%;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
 div#contact {
 	/*background: white;*/
 	width: 500px;
 	margin: auto;
-	margin-top: 100px;
+	margin-top: 50px;
+	margin-bottom: 30px;
 	text-align: center;
 	font-size: 14px;
 }
@@ -170,14 +219,15 @@ div#contact {
 
 div#projects {
 	/*background: black;*/
-	margin-top: 80px;
+	margin-top: 100px;
 	text-align: center;  /*Centre list elements horizontally*/
 }
 
-#rig {
+ul#rig {
 	/*background-color:red;*/
     max-width:900px;
     margin:0 auto; /*center aligned*/
+    margin-top: 100px;
     padding:0;
     font-size:0; /* Remember to change it back to normal font size if have captions */
     list-style:none;
@@ -215,7 +265,7 @@ div#projects {
 }
 
 #rig li:hover .rig-img {
-    transform:scale(1.05);
+    transform:scale(1.01);
 }
         
 /* If have the overlay layer */
@@ -227,12 +277,12 @@ div#projects {
     bottom: 0;
     right: 0;
     margin: auto;
-    background: #3DC0F1 no-repeat center 20%;
-    /*background: var(--lightblue) no-repeat center 20%;*/
+    /*background: #3DC0F1 no-repeat center 20%;*/
+    background: var(--blue) no-repeat center 20%;
     background-size:50px 50px;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
-    transition:all 0.6s;
+    transition:all 0.3s;
 }
 #rig li:hover .rig-overlay {
     opacity:0.8;
@@ -259,7 +309,7 @@ div#projects {
     opacity:0;
     filter:alpha(opacity=0);/*For older IE*/
     transform:translateY(-20px);
-    transition:all .3s;
+    transition:all .1s;
 }
 #rig li:hover .rig-text {
     transform:translateY(0px);

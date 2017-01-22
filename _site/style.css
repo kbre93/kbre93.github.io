@@ -1,0 +1,338 @@
+:root {
+	--base:#EEE;
+	--title-text:#000;
+	--menu-text:#333;
+	--gray-text:#657b83;
+	--yellow:#b58900;
+	--orange:#cb4b16;
+	--red:#dc322f;
+	--magenta:#d33682;
+	--violet:#6c71c4;
+	--blue:#268bd2;
+	--lightblue:#C3EBFF;
+	--cyan:#2aa198 ;
+	--green:#859900;
+}
+
+
+body {
+	/*background-color: rgb(30, 30, 30);*/
+	/*background-color: rgb(250,250,250);*/
+	margin:0;
+	padding:0;
+}
+
+ul.topnav {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  /*background-color: #333;*/
+  /*background-color: red;*/
+  /*height: 50px;*/
+}
+
+ul.topnav li {float: right;}
+ul.topnav li:first-child {float: left;}
+
+ul.topnav li a {
+	
+  	display: inline-block;
+  	color:var(--title-text);
+  	text-align: center;
+  	text-decoration: none;
+  	transition: 0.3s;
+}
+ul.topnav li a.name {
+	font-family: "arvo";
+	font-size: 26px;
+	margin: 30px 60px;
+}
+ul.topnav li a.pageTitle {
+	font-family: "arvo";
+	font-size: 18px;
+	margin: 30px 80px 30px 0px;
+	transition: 0.3s;
+}
+
+ul.topnav li a.pageTitle:hover {
+	color: var(--blue);
+	border-bottom: solid var(--blue);
+	border-bottom-width: 1px;
+}
+
+ul.topnav li.icon {display: none;}
+ul.topnav li.icon a {
+	font-size: 18px;
+	margin: 40px 60px 40px 0px;
+}
+
+@media screen and (max-width:720px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:720px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+    margin: 40px 60px;
+  }
+}
+
+span.surname {
+	color: var(--blue);
+}
+
+div.content {
+	font-family: "avenir";
+	/*background: black;*/
+}
+
+div.bottombar{
+	font-family: "arvo";
+	font-size: 14px;
+	opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+	margin: 120px auto 60px;
+	/*margin-top: 120px;*/
+	text-align: center;
+}
+
+/******** GENERAL SETTINGS *********/
+
+div.title {
+	/*color: var(--yellow);*/
+	/*background: #000;*/
+	width: 600px;
+	margin: auto;
+	margin-top: 50px;
+	font-family: "avenir";
+	font-size: 28px;
+	text-align: center;
+}
+div.description {
+	/*color: var(--yellow);*/
+	/*background: #000;*/
+	width: 550px;
+	margin: auto;
+	margin-top: 50px;
+	font-family: "avenir";
+	font-size: 18px;
+	text-align: left;
+  /*text-align-last: center;*/
+	/*-moz-text-align-last: center; /* Code for Firefox */
+}
+@media screen and (max-width:600px) {
+	div.title {
+		width:300px;
+	}
+	div.description {
+		width:300px;	
+	}
+}
+
+div.quote {
+  width: 550px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: "avenir";
+  font-size: 18px;
+  text-align: center;
+  /*text-align-last: center;*/
+  -moz-text-align-last: center; /* Code for Firefox */
+}
+
+
+/**********ABOUT PAGE**********/
+
+a.link {
+	text-decoration: none;
+	color: inherit;
+	border-bottom: solid var(--blue);
+	border-bottom-width: 1px;
+	font-size: 19px;
+	transition: 0.3s;
+}
+a.link:hover{
+	color: var(--blue);
+}
+
+
+div#banner {
+   	margin: 0px 0px;
+	padding: 0;
+   	/*margin-top: 20px;*/
+   	background-color:#000
+   	top: 0;
+   	left: 0;
+}
+div#banner img{
+	width:100%;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+div#contact {
+	/*background: white;*/
+	width: 500px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+
+#contact img{
+	display: inline;
+	width: 20px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+#contact img:hover{
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+
+/*img {
+	width: 500px;
+}*/
+
+
+/**********PROJECTS PAGE**********/
+
+div#projects {
+	/*background: black;*/
+	margin-top: 100px;
+	text-align: center;  /*Centre list elements horizontally*/
+}
+
+ul#rig {
+	/*background-color:red;*/
+    max-width:900px;
+    margin:0 auto; /*center aligned*/
+    margin-top: 100px;
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+}
+
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    /*width:25%;*/
+    width:300px;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+	/*background:blue;*/
+    margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.01);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    /*background: #3DC0F1 no-repeat center 20%;*/
+    background: var(--blue) no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.3s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+	/*background:green;*/
+    display:block;
+    padding:0 30px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:18px;
+    font-weight:bold;
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'avenir';
+    font-weight:normal!important;
+    top:40%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .1s;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+/* when screen less than 9000, width is 25%*/
+/*@media (max-width: 9000px) { 
+    #rig li {
+        width:25%;
+    }
+}
+
+@media (max-width: 700px) {
+    #rig li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #rig li {
+        width:50%;
+    }
+}
+
+*/

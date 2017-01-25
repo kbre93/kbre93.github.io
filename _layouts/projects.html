@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div id="projects"> 
+    <div class="title"> 
+        Projects
+    </div>
+    <div class="quote"> 
+        <span style="font-style: italic;"> 'Make cool stuff' </span> &mdash; Leonardo da Vinci, probably
+    </div>
+	<ul id="rig">    
+
+		{% for post in site.posts %}
+	      <li>
+		    <a class="rig-cell" href="{{ post.url | relative_url }}">
+	          <img class="rig-img" src="{{ post.imgLink | relative_url}}"/>
+	          <span class="rig-overlay"></span>
+	          <span class="rig-text">{{ post.title }}</span>
+	        </a>
+       <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	        <h2>
+	          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+	        </h2> -->
+	      </li>
+    	{% endfor %}
+	</ul>
+</div>

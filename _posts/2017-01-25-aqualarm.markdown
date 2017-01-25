@@ -1,0 +1,8 @@
+---
+layout: post
+title:  Aqualarm
+date:   2017-01-22 14:33:03 +1300
+imgLink: assets/aqualarm_square.jpg
+permalink: projects/aqualarm
+---
+Aqualarm stuff

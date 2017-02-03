@@ -6,7 +6,25 @@ layout: default
     <div class="title"> 
         {{ page.title }}
     </div>
-    <div class="quote"> 
+    <div class="description"> 
+      <div class="gallery-container" style="max-width:800px">
+        {% for image in site.static_files %}
+          {% if image.path contains page.imgDir %}
+            <img class="gallery-image" onclick="plusDivs(1)" src="{{ site.url }}{{ image.path }}" style="width:100%">
+          {% endif %}
+        {% endfor %}
+        <div class="gallery-nav" style="width:100%">
+          <div class="gallery-left" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="gallery-right" onclick="plusDivs(1)">&#10095;</div>
+          {% assign iter = 1 %}
+          {% for image in site.static_files %}
+            {% if image.path contains page.imgDir %}
+              <span class="gallery-indicator" onclick="currentDiv({{ iter }})"></span>
+              {% assign iter = iter | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
         {{ content }}
     </div>
 </div>

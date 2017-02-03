@@ -15,9 +15,69 @@
 }
 
 
+
+.gallery-image {display:none}
+
+.gallery-container {
+  max-width:980px;
+  width: 70%;
+  margin:auto;
+  position:relative;
+  margin-bottom: 50px;
+}
+.gallery-container:hover {
+  /*display:block;*/
+}
+
+.gallery-nav {
+  text-align:center;
+  margin-top:16px;
+  margin-bottom:16px;
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform:translate(-50%,0%);
+  -ms-transform:translate(-50%,0%);
+  color: white;
+}
+
+.gallery-left {
+  float:left;
+  padding-left:16px;
+  cursor:pointer
+}
+.gallery-left:hover{
+  color:#b4aa50;
+}
+
+.gallery-right {
+  float:right;
+  padding-right:16px;
+  cursor:pointer
+}
+.gallery-right:hover{
+  color:#b4aa50;
+}
+
+.gallery-indicator {
+  cursor:pointer;
+  height:10px;
+  width:10px;
+  /*padding:0;*/
+  /*background-color:#FFF;*/
+  color:#000;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:0.5px solid #ccc;
+  background-color:transparent;
+}
+.gallery-indicator:hover {
+  background-color:#FFF;
+}
+
 body {
 	/*background-color: rgb(30, 30, 30);*/
-	/*background-color: rgb(250,250,250);*/
 	margin:0;
 	padding:0;
 }
@@ -99,18 +159,21 @@ span.surname {
 }
 
 div.content {
-	font-family: "avenir";
+	/*font-family: "avenir";*/
+  font-family: 'Nunito Sans', sans-serif;
 	/*background: black;*/
 }
 
-div.bottombar{
-	font-family: "arvo";
-	font-size: 14px;
-	opacity: 0.2;
-    filter: alpha(opacity=20); /* For IE8 and earlier */
-	margin: 120px auto 60px;
-	/*margin-top: 120px;*/
-	text-align: center;
+div.bottombar{  
+  margin: 120px auto 60px;
+}
+
+div.signoff{
+  font-family: "arvo";
+  font-size: 14px;
+  opacity: 0.2;
+  filter: alpha(opacity=20); /* For IE8 and earlier */
+  text-align: center;
 }
 
 /******** GENERAL SETTINGS *********/
@@ -121,22 +184,29 @@ div.title {
 	width: 600px;
 	margin: auto;
 	margin-top: 50px;
-	font-family: "avenir";
+	/*font-family: "avenir";*/
+  font-family: 'Nunito Sans', sans-serif;
 	font-size: 28px;
 	text-align: center;
 }
 div.description {
 	/*color: var(--yellow);*/
 	/*background: #000;*/
-	width: 550px;
+	width: 680px;
 	margin: auto;
 	margin-top: 50px;
-	font-family: "avenir";
+	/*font-family: "avenir";*/
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: lighter;
 	font-size: 18px;
 	text-align: left;
   /*text-align-last: center;*/
 	/*-moz-text-align-last: center; /* Code for Firefox */
 }
+#about {
+  width: 550px;
+}
+
 @media screen and (max-width:600px) {
 	div.title {
 		width:300px;
@@ -150,7 +220,8 @@ div.quote {
   width: 550px;
   margin: auto;
   margin-top: 50px;
-  font-family: "avenir";
+  /*font-family: "avenir";*/
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 18px;
   text-align: center;
   /*text-align-last: center;*/
@@ -191,7 +262,7 @@ div#contact {
 	/*background: white;*/
 	width: 500px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 0px;
 	margin-bottom: 30px;
 	text-align: center;
 	font-size: 14px;
@@ -200,13 +271,15 @@ div#contact {
 #contact img{
 	display: inline;
 	width: 20px;
-	margin: 0 10px;
+	margin: 0 22px;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
 	cursor: pointer;
 }
 
 #contact img:hover{
-	opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+	opacity: 1.;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 
@@ -219,7 +292,7 @@ div#contact {
 
 div#projects {
 	/*background: black;*/
-	margin-top: 100px;
+	margin-top: 50px;
 	text-align: center;  /*Centre list elements horizontally*/
 }
 
@@ -227,7 +300,7 @@ ul#rig {
 	/*background-color:red;*/
     max-width:900px;
     margin:0 auto; /*center aligned*/
-    margin-top: 100px;
+    margin-top: 80px;
     padding:0;
     font-size:0; /* Remember to change it back to normal font size if have captions */
     list-style:none;
@@ -302,18 +375,27 @@ ul#rig {
     font-size:18px;
     font-weight:bold;
     /*font-family: 'Oswald', sans-serif;*/
-    font-family: 'avenir';
+    /*font-family: 'avenir';*/
+    font-family: 'Nunito Sans', sans-serif;
     font-weight:normal!important;
     top:40%;
     color:white;
     opacity:0;
     filter:alpha(opacity=0);/*For older IE*/
     transform:translateY(-20px);
+    text-transform: uppercase;
     transition:all .1s;
 }
 #rig li:hover .rig-text {
     transform:translateY(0px);
     opacity:0.9;
+}
+
+#post_sub_heading {
+    font-weight: bold; 
+    /*font-size: 22px;*/
+    margin-top: 40px;
+    margin-bottom: 0px;
 }
 
 /* when screen less than 9000, width is 25%*/

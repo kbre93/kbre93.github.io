@@ -13,6 +13,8 @@ I often visit daily deal websites, looking for the same thing from week to week.
 
 The GrabOne scraper is a taskbar application which allows you to quickly filter the current deals on [GrabOne](http://grabone.co.nz){:.link}. You specify two criteria in the Filter tab: the minimum number of purchases of the deal and a list of keywords. The filter operator is also specified as AND or OR (a toggle button) to specify if the deals need to match both or either of the two criteria. The Deals tab shows the details of each item.
 
-{% include post_sub_heading.html sub_heading="Build details" %}
-The scraper is an Electron application using node.js and is therefore cross-platform. The code can be found at my [Github](https://github.com/kbre93){:.link}.
+{% include post_sub_heading.html sub_heading="Under the hood" %}
+The scraper is an [Electron](http://electron.atom.io/){:.link} application using node.js and is therefore cross-platform. The code can be found at my [Github](https://github.com/kbre93){:.link}.
 
+{% include post_sub_heading.html sub_heading="Lessons" %}
+The main goal of this project was to learn some web scraping. The project started out as a Python program, using the [Scrapy](https://scrapy.org/){:.link} framework, deployed as a [cloud-based web-crawler](https://scrapinghub.com/){:.link}, which would then scrape the website contents to an AWS bucket. This was overkill for my application (but I learnt alot!) and I wanted a simple interface to quickly check the deals, so I moved to the Node/Electron approach.

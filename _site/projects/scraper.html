@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <meta name="description" content="I often visit daily deal websites, looking for the same thing from week to week. I wanted to be able to check for deals quickly but without getting spammed o...">
+  <meta name="description" content="I often visit daily deal websites, looking for the same thing from week to week. I wanted to be able to be notified of relevant deals easily, but without get...">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/projects/scraper">
@@ -18,13 +18,13 @@
  -->
 
 <head>
-  <title>Daily deal scraper</title>
+  <title>GrabOne Scraper</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link href="dist/css/app.css" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-  <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Arvo|Nunito+Sans">
+  <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Arvo|Nunito+Sans:300">
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -93,7 +93,7 @@
       <div class="wrapper">
         <div id="projects"> 
     <div class="title"> 
-        Daily deal scraper
+        GrabOne Scraper
     </div>
     <div class="description"> 
       <div class="gallery-container" style="max-width:800px">
@@ -247,12 +247,19 @@
           
         </div>
       </div>
-        <p>I often visit daily deal websites, looking for the same thing from week to week. I wanted to be able to check for deals quickly but without getting spammed on a mailing list. I figured this was a good chance to learn a bit of web dev and scraping, which could be useful for all sorts of future projects.</p>
+        <p>I often visit daily deal websites, looking for the same thing from week to week. I wanted to be able to be notified of relevant deals easily, but without getting spammed on a mailing list. I figured this was a good chance to learn a bit of web dev and scraping, useful skills for future projects I had in mind.</p>
 
-<p>The GrabOne scraper is a taskbar application which allows you to quickly filter the current deals on <a href="http://grabone.co.nz" class="link">GrabOne</a> using keywords and/or a minimum number bought criteria.</p>
+<div class="description" id="post_sub_heading"> 
+	User guide
+</div>
 
-<p>How it works:
-The scraper is an Electron application, using node.js to get the deals from the GrabOne website. Electron provided the most simple way I could find of making a desktop application using</p>
+<p>The GrabOne scraper is a taskbar application which allows you to quickly filter the current deals on <a href="http://grabone.co.nz" class="link">GrabOne</a>. You specify two criteria in the Filter tab: the minimum number of purchases of the deal and a list of keywords. The filter operator is also specified as AND or OR (a toggle button) to specify if the deals need to match both or either of the two criteria. The Deals tab shows the details of each item.</p>
+
+<div class="description" id="post_sub_heading"> 
+	Build details
+</div>
+
+<p>The scraper is an Electron application using node.js and is therefore cross-platform. The code can be found at my <a href="https://github.com/kbre93" class="link">Github</a>.</p>
 
 
     </div>
@@ -260,17 +267,24 @@ The scraper is an Electron application, using node.js to get the deals from the 
 
 <!-- <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Daily deal scraper</h1>
+    <h1 class="post-title" itemprop="name headline">GrabOne Scraper</h1>
     <p class="post-meta"><time datetime="2017-01-22T14:33:03+13:00" itemprop="datePublished">Jan 22, 2017</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>I often visit daily deal websites, looking for the same thing from week to week. I wanted to be able to check for deals quickly but without getting spammed on a mailing list. I figured this was a good chance to learn a bit of web dev and scraping, which could be useful for all sorts of future projects.</p>
+    <p>I often visit daily deal websites, looking for the same thing from week to week. I wanted to be able to be notified of relevant deals easily, but without getting spammed on a mailing list. I figured this was a good chance to learn a bit of web dev and scraping, useful skills for future projects I had in mind.</p>
 
-<p>The GrabOne scraper is a taskbar application which allows you to quickly filter the current deals on <a href="http://grabone.co.nz" class="link">GrabOne</a> using keywords and/or a minimum number bought criteria.</p>
+<div class="description" id="post_sub_heading"> 
+	User guide
+</div>
 
-<p>How it works:
-The scraper is an Electron application, using node.js to get the deals from the GrabOne website. Electron provided the most simple way I could find of making a desktop application using</p>
+<p>The GrabOne scraper is a taskbar application which allows you to quickly filter the current deals on <a href="http://grabone.co.nz" class="link">GrabOne</a>. You specify two criteria in the Filter tab: the minimum number of purchases of the deal and a list of keywords. The filter operator is also specified as AND or OR (a toggle button) to specify if the deals need to match both or either of the two criteria. The Deals tab shows the details of each item.</p>
+
+<div class="description" id="post_sub_heading"> 
+	Build details
+</div>
+
+<p>The scraper is an Electron application using node.js and is therefore cross-platform. The code can be found at my <a href="https://github.com/kbre93" class="link">Github</a>.</p>
 
 
   </div>

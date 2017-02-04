@@ -43,6 +43,9 @@ function dropDownMenu() {
 
 $(document).ready( function() {
   showDivs(slideIndex);
-  document.getElementById("contact-email").innerHTML = "<a href=" + "mail" + "to:" + str1 + str2 + str3 + str4 + " class='link'>" + str5 + "</a>"
+
+  if (document.getElementById('contact-email') != null) {
+    document.getElementById("contact-email").innerHTML = "<a href=" + "mail" + "to:" + str1 + str2 + str3 + str4 + " class='link'>" + str5 + "</a>"
+  }
   document.getElementById("email-img").href="mail" + "to:" + str1 + str2 + str3 + str4; 
 });

@@ -290,7 +290,9 @@ div#banner {
    	left: 0;
 }
 div#banner img{
-	width:100%;
+	/*width:100%;*/
+  max-width: 100%;
+  height: auto;
 	opacity: 0.9;
     filter: alpha(opacity=90); /* For IE8 and earlier */
 }

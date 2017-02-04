@@ -31,6 +31,16 @@ function showDivs(n) {
   }
 }
 
+function dropDownMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+
 $(document).ready( function() {
   showDivs(slideIndex);
   document.getElementById("contact-email").innerHTML = "<a href=" + "mail" + "to:" + str1 + str2 + str3 + str4 + " class='link'>" + str5 + "</a>"

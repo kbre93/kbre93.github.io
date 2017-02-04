@@ -97,7 +97,6 @@ ul.topnav li {float: right;}
 ul.topnav li:first-child {float: left;}
 
 ul.topnav li a {
-	
   	display: inline-block;
   	color:var(--title-text);
   	text-align: center;
@@ -107,8 +106,15 @@ ul.topnav li a {
 ul.topnav li a.name {
 	font-family: "arvo";
 	font-size: 26px;
-	margin: 30px 60px;
+	margin: 30px 0px 30px 60px;
+
 }
+@media screen and (max-width:400px) {
+  ul.topnav li a.name {
+    font-size: 20px;
+  }
+}
+
 ul.topnav li a.pageTitle {
 	font-family: "arvo";
 	font-size: 18px;
@@ -125,10 +131,10 @@ ul.topnav li a.pageTitle:hover {
 ul.topnav li.icon {display: none;}
 ul.topnav li.icon a {
 	font-size: 18px;
-	margin: 40px 60px 40px 0px;
+	margin: 30px 80px 30px 0px;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:750px) {
   ul.topnav li:not(:first-child) {display: none;}
   ul.topnav li.icon {
     float: right;
@@ -136,12 +142,12 @@ ul.topnav li.icon a {
   }
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:750px) {
   ul.topnav.responsive {position: relative;}
   ul.topnav.responsive li.icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 0; 
   }
   ul.topnav.responsive li {
     float: none;
@@ -174,6 +180,7 @@ div.signoff{
   opacity: 0.2;
   filter: alpha(opacity=20); /* For IE8 and earlier */
   text-align: center;
+
 }
 
 /******** GENERAL SETTINGS *********/
@@ -181,7 +188,7 @@ div.signoff{
 div.title {
 	/*color: var(--yellow);*/
 	/*background: #000;*/
-	width: 600px;
+	width: 380px;
 	margin: auto;
 	margin-top: 50px;
 	/*font-family: "avenir";*/
@@ -189,6 +196,7 @@ div.title {
 	font-size: 28px;
 	text-align: center;
 }
+
 div.description {
 	/*color: var(--yellow);*/
 	/*background: #000;*/
@@ -207,7 +215,26 @@ div.description {
   width: 550px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:605px) {
+  div.title{
+    font-size: 22px;
+    /*width: 400px;*/
+    width:300px;
+  }
+  #about {
+    width: 400px;
+    font-size: 16px;
+  }
+
+}
+@media screen and (max-width:720px) {
+  div.description {
+    width: 400px;
+    font-size: 16px;
+  }
+}
+
+/*@media screen and (max-width:600px) {
 	div.title {
 		width:300px;
 	}
@@ -215,7 +242,7 @@ div.description {
 		width:300px;	
 	}
 }
-
+*/
 div.quote {
   width: 550px;
   margin: auto;
@@ -260,14 +287,13 @@ div#banner img{
 
 div#contact {
 	/*background: white;*/
-	width: 500px;
 	margin: auto;
 	margin-top: 0px;
 	margin-bottom: 30px;
 	text-align: center;
 	font-size: 14px;
 }
-
+  
 #contact img{
 	display: inline;
 	width: 20px;

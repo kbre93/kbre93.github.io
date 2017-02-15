@@ -283,15 +283,15 @@ a.link:hover{
 
 div#banner {
    	margin: 0px 0px;
-	padding: 0;
+	 padding: 0;
    	/*margin-top: 20px;*/
    	background-color:#000
    	top: 0;
    	left: 0;
 }
 div#banner img{
-	/*width:100%;*/
-  max-width: 100%;
+	width:100%;
+  /*max-width: 100%;*/
   height: auto;
 	opacity: 0.9;
     filter: alpha(opacity=90); /* For IE8 and earlier */

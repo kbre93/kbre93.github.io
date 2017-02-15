@@ -7,7 +7,7 @@ imgDir: assets/images/aqualarm
 permalink: projects/aqualarm
 ---
 
-In my quest to improve my morning ritual, I discovered two truths: 1) Waking up is hard and 2) being dehydrated is not a good start to the day. That is why I created the Aqualarm, an alarm clock which requires you to drink a glass of water to turn it off. 
+In my quest to improve my morning ritual, I discovered two facts: 1) waking up is hard and 2) being dehydrated is not a good start to the day. That is why I created the Aqualarm, an alarm clock which requires you to drink a glass of water to turn it off. 
 
 {% include post_sub_heading.html sub_heading="User manual" %}
 When first used, tare the scale to the weight of your empty drinking vessel. Before going to bed, fill up your glass with with water, set the timer, and press start. When the alarm goes off in the morning, drink the water and return the empty glass to the platform to silence the alarm. Attempt to continue snoozing but fail and instead have a great, hydrated start to your day.

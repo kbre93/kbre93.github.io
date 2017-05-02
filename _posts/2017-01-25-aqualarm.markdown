@@ -7,13 +7,10 @@ imgDir: assets/images/aqualarm
 permalink: projects/aqualarm
 ---
 
-In my quest to improve my morning ritual, I discovered two facts: 1) waking up is hard and 2) being dehydrated is not a good start to the day. That is why I created the Aqualarm, an alarm clock which requires you to drink a glass of water to turn it off. 
+Waking up is hard and starting the day dehydrated isn't too good either. That's why I created the Aqualarm, an alarm clock which requires you to drink a glass of water to turn it off. 
 
-{% include post_sub_heading.html sub_heading="User manual" %}
-When first used, tare the scale to the weight of your empty drinking vessel. Before going to bed, fill up your glass with with water, set the timer, and press start. When the alarm goes off in the morning, drink the water and return the empty glass to the platform to silence the alarm. Attempt to continue snoozing but fail and instead have a great, hydrated start to your day.
+{% include post_sub_heading.html sub_heading="How it works" %}
+The scale is first zeroed to the weight of the empty bottle. Once the alarm is set, the bottle is filled and placed on the scale. When the alarm goes off in the morning it will not stop until the water is drunken and the empty bottle is returned to the platform.
 
 {% include post_sub_heading.html sub_heading="Build details" %}
-The load cell used for weight measurement was taken from a cheap kitchen scale, and is connected to a [HX711](https://www.sparkfun.com/products/13879){:.link} load cell amp from SparkFun. The ATmega328 microcontroller (i.e an Arduino Uno) records the weight, sets the time, and drives the 7-segment, LED display and piezo buzzer. In short, the code is organised as finite state machine (tare - setting time - counting down - sounding alarm), the [HX711 library](https://github.com/bogde/HX711){:.link} is used for reading the scale weight, existing [countdown timer code](http://playground.arduino.cc/Main/CountDownTimer){:.link} was used for the timer and a custom LED display driver was written. I designed the circuit board in Altium and routed it using a LPFK board router. The case was laser-cut from from acrylic. The code and drawings/designs are available on my [Github](https://github.com/kbre93){:.link}.
-
-{% include post_sub_heading.html sub_heading="Lessons" %}
-This was my first proper microcontroller project so I learnt a lot of Arduino programming &emdash; particularly for using the load cell and driving the display &emdash; and integrating a microcontroller into a stand-alone circuit. I also finally had an excuse to use the PCB router in my lab and brush up on my Altium skills. 
+The load cell used for weight measurement was taken from a cheap kitchen scale, and is connected to a [HX711](https://www.sparkfun.com/products/13879){:.link} load cell amp from SparkFun. The ATmega328 microcontroller (i.e an Arduino Uno) records the weight, sets the time, and drives the 7-segment, LED display and piezo buzzer. I designed the circuit board in Altium and routed it using a LPFK board router. The case was laser-cut from from acrylic. The code and drawings/designs are available on my [Github](https://github.com/kbre93){:.link}.

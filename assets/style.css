@@ -197,20 +197,28 @@ div.title {
 	text-align: center;
 }
 
+div.subtitle {
+  width: 680px;
+  margin: auto;
+  margin-top: 50px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+  
+}
+
 div.description {
-	/*color: var(--yellow);*/
-	/*background: #000;*/
 	width: 680px;
 	margin: auto;
 	margin-top: 50px;
-	/*font-family: "avenir";*/
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
 	font-size: 18px;
 	text-align: left;
-  /*text-align-last: center;*/
-	/*-moz-text-align-last: center; /* Code for Firefox */
+  
 }
+
 #about {
   width: 550px;
 }
